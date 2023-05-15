@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiApp1.SettingsPage"
+             Title="SettingsPage">
+    <VerticalStackLayout>
+        <Label Text="Settings" 
+            FontSize="30"
+            Margin="0,0,0,20"/>
+
+        <StackLayout Orientation="Horizontal">
+            <CheckBox IsChecked="True" />
+            <Label Text="Function Log" Margin="{OnPlatform WinUI='-90,0,0,0'}" VerticalOptions="Center" InputTransparent="True"/>
+        </StackLayout>
+        
+        <StackLayout Orientation="Horizontal">
+            <CheckBox IsChecked="False" />
+            <Label Text="Action Log" Margin="{OnPlatform WinUI='-90,0,0,0'}" VerticalOptions="Center" InputTransparent="True"/>
+        </StackLayout>
+
+        <StackLayout Orientation="Horizontal">
+            <Label Text="Interval Log(Min)" VerticalOptions="Center" InputTransparent="True"/>
+            <CheckBox IsChecked="True" />
+            <Label Text="MaxMin Log(Min)" Margin="10,0,10,0" VerticalOptions="Center" InputTransparent="True"/>
+        </StackLayout>
+
+        <StackLayout Orientation="Horizontal">
+            <Label Text="Pause updates on resize/move" Margin="0,0,20,0" VerticalOptions="Center" InputTransparent="True"/>
+        </StackLayout>
+
+        <StackLayout Orientation="Vertical" Margin="0,10,0,0">
+            <Label Text="LogPath" />
+            <Entry Text="ttt"
+               IsReadOnly="True"/>
+        </StackLayout>
+
+
+        <Grid WidthRequest="440" 
+              RowDefinitions="100" 
+              ColumnDefinitions="*,*">
+            
+            <Button Text="Cancel"
+                    Grid.Column="0"
+                    HeightRequest="50"
+                    WidthRequest="100"
+                    />
+            <Button Text="Save"
+                    Grid.Column="1"
+                    HeightRequest="50"
+                    WidthRequest="100"
+                    />
+
+        </Grid>
+
+    </VerticalStackLayout>
+    
+    
+</ContentPage>
